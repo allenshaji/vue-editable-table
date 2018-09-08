@@ -1,6 +1,7 @@
 # vuetablessimplify
 
 > Editable data table in Vue.js
+Now I can make the user to select the fields of the table, so that only those data from these fields will be displayed in the table. For eg: If a user select only fields userID,employeeCode, Then only data from userID,employeeCode will be displayed in the table.
 
 ## Build Setup
 
