@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper" id="regBox">
+  <div class="container h-100 d-flex justify-content-center" id="regBox">
     <div v-if="hidetable == 1" v-cloak>
       <template>
-        <div class="col-md-7">
-          <label>Please select the required datafields</label>
+        <div class="col-md-12">
+          <label>Please select the required datafields of the table</label>
           <b-form-checkbox-group multiple v-model="fieldselect" :options="selections" class="mb-3"></b-form-checkbox-group>
         </div>
       </template>

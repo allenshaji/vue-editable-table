@@ -6,8 +6,6 @@ import router from './router'
 import BootstrapVue from "bootstrap-vue"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
-import '@babel/polyfill'
-window.Tether = require('tether');
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
