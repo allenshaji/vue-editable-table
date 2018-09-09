@@ -4,11 +4,11 @@
       <template>
         <div class="col-md-12">
           <label>Please select the required datafields of the table</label>
-          <b-form-checkbox-group multiple v-model="fieldselect" :options="selections" class="mb-3"></b-form-checkbox-group>
+          <b-form-checkbox-group v-model="fieldselect" :options="selections" class="mb-3" aria-required="required"></b-form-checkbox-group>
         </div>
       </template>
       <div class="px-3">
-        <b-button :size="'sm'" :variant='"primary"' @click="showdata">Submit</b-button>
+        <b-button :size="'sm'" :variant='"primary"' @click="showdata" :class="{ disabled: isDisabled }" :disabled="isDisabled">Submit</b-button>
       </div>
     </div>
     <div v-if="hidetable == 2" v-cloak>
@@ -40,6 +40,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
+      disableButton: true,
      fields: {},
       fieldselect:[],
       selected: [], // Must be an array reference!
@@ -64,10 +65,19 @@ export default {
       fselect:'',
       hidetable: 1,
       currentPage: 1,
-    perPage: 15,
-    filter: null
-    }
-  },
+      perPage: 5,
+      filter: null
+       }
+     },
+       computed: {
+       isDisabled () {
+       if (this.fieldselect.length > 0) {
+        return false;
+       } else {
+        return true;
+           }
+           }
+          },
           watch:{
           fieldselect: function() {
             var vm = this;
