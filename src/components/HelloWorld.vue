@@ -61,6 +61,7 @@ export default {
         { age: 21, name: 'Anoop',sex:'Male',email:'scty@gmail.com', phone:'9632587415' },
         { age: 29, name: 'Sobin',sex:'Male',email:'yorker@gmail.com', phone:'9874563219' },
         { age: 28, name: 'Mathew',sex:'Male',email:'manager@gmail.com', phone:'7896325419' },
+        { age: 58, name: 'Thomas',sex:'Male',email:'thomas@gmail.com', phone:'9654123698' },
       ],
       fselect:'',
       hidetable: 1,
